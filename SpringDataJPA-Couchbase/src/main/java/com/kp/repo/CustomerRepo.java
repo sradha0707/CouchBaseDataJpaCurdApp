@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.kp.model.Customer;
 
 @Repository
-public interface CustomerRepo extends CouchbaseRepository<Customer, Integer> {
+public interface CustomerRepo extends CouchbaseRepository<Customer, String> {
 
 }

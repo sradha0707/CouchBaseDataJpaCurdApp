@@ -26,6 +26,6 @@ public class Customer {
 	private String name;
 	
 	@Field
-	private String mobile;
+	private String email;
 
 }
