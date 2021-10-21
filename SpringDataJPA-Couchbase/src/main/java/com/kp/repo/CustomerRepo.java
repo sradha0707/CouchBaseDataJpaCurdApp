@@ -8,4 +8,6 @@ import com.kp.model.Customer;
 @Repository
 public interface CustomerRepo extends CouchbaseRepository<Customer, String> {
 
+	public Customer findByName(String name);
+	public Customer deleteByEmail(String email);
 }

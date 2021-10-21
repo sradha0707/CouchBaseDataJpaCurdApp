@@ -65,5 +65,17 @@ public class CustomerController {
 		repository.deleteById(id);
 		return new ResponseEntity<>("Record Deleted Successfully",HttpStatus.OK);
 	}
+	
+	@GetMapping(value="/findbyname/{name}")
+	public ResponseEntity<String> findByName(@PathVariable String name){
+		Customer customerByName = repository.findByName(name);
+		logger.info(" "+ customerByName);
+		return new ResponseEntity<>("Record Found by customer name",HttpStatus.OK);
+	  
+	}
+	
+	
+	
+	
 
 }
